@@ -1,5 +1,5 @@
 {
-	"name": "SvenBuis/knp-menu"
+	"name": "svenbuis/knp_menu"
 	, "description": "KnpMenu for CakePHP 3"
 	, "type": "cakephp-plugin"
 	, "keywords": [
