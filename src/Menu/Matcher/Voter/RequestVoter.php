@@ -8,6 +8,9 @@ use Knp\Menu\Matcher\Voter\VoterInterface;
 
 class RequestVoter implements VoterInterface
 {
+    /**
+     * @var Request
+     */
     protected $_request;
 
     public function __construct(Request $request)
@@ -17,6 +20,6 @@ class RequestVoter implements VoterInterface
 
     public function matchItem(ItemInterface $item)
     {
-        return $this->_request->here() == $item->getUri();
+        return $this->_request->getRequestTarget() == $item->getUri();
     }
 }
