@@ -18,6 +18,6 @@ class MenuComponent extends Component
 
     public function beforeRender(Event $event)
     {
-        $event->subject()->set('_knp_menus_', $this->_menus);
+        $event->getSubject()->set('_knp_menus_', $this->_menus);
     }
 }
