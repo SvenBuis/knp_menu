@@ -24,7 +24,7 @@ class MenuHelper extends Helper
     public function render($name, $options = [])
     {
         $options += [
-            'matcher' => new Matcher($this->request),
+            'matcher' => new Matcher($this->getView()->getRequest()),
             'renderer' => '\Gourmet\KnpMenu\Menu\Renderer\ListRenderer',
         ];
 
@@ -38,7 +38,7 @@ class MenuHelper extends Helper
         }
 
         if (!is_object($matcher)) {
-            $matcher = new $matcher($this->request);
+            $matcher = new $matcher($this->getView()->getRequest());
         }
 
         if (!is_object($renderer)) {
